@@ -9,7 +9,8 @@ class Search extends React.Component {
         savedArticles: [],
         searchQuery: "",
         loading: false,
-        key: 0
+        begin_date: "",
+        end_date: ""
     }
 
     getArticles = event => {
@@ -59,6 +60,12 @@ class Search extends React.Component {
                             <div className="form-group">
                                 <label>Search Query</label>
                                 <input className="form-control" value={this.state.searchQuery} onChange={this.handleInputChange} name="searchQuery"></input>
+
+                                <label>Start Date (YYYMMDD)</label>
+                                <input className="form-control" value={this.state.begin_date} onChange={this.handleInputChange} name="begin_date"></input>
+
+                                <label>End Date (YYYMMDD)</label>
+                                <input className="form-control" value={this.state.end_date} onChange={this.handleInputChange} name="end_date"></input>
                             </div>
                             <button type="submit" className="btn btn-default" onClick={this.getArticles}>Submit</button>
                         </form>

@@ -47,7 +47,7 @@ class Saved extends React.Component {
                             <div className="panel panel-default">
                             <div className="panel-body">
                                 <div className="col-md-11">
-                                <a href={article.web_url}><h4>{article.headline.main}</h4></a>
+                                        <a href={article.web_url}><h4>{article.headline}</h4></a>
                                         <p>{article.snippet}</p>
                                 </div>
                                 <div className="col-md-1">
